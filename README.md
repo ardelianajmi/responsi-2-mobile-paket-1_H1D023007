@@ -1,16 +1,72 @@
-# responsi2_mobile_paket1_h1d023007
+# 💻 Adelmart Inventory – Aplikasi Inventaris Komputer Modern
+Flutter • REST API • JSON • SharedPreferences
 
-A new Flutter project.
+**Adelmart Inventory** adalah aplikasi mobile untuk mengelola inventaris komputer pada sebuah toko bernama **Adelmart**.  
+Aplikasi ini dibuat menggunakan **Flutter** sebagai frontend dan **REST API** (Laravel / CodeIgniter) sebagai backend.
 
-## Getting Started
+Fitur utama:
+- Registrasi dan Login user dengan token
+- Menyimpan sesi login di **SharedPreferences**
+- CRUD (Create, Read, Update, Delete) data inventaris komputer
+- Tampilan modern dengan tema abu-abu (grey theme)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 👨‍🎓 Identitas Mahasiswa
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> ⚠ Silakan sesuaikan data berikut dengan identitasmu.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Informasi     | Detail                     |
+|--------------|----------------------------|
+| Nama Lengkap | _Adelia Najmi  Raissa_     |
+| NIM          | _H1D023007_                |
+| Shift Baru   | _Shift E_                  |
+| Shift Asal   | _Shift D_                  |
+
+---
+
+## 📱 Demo Aplikasi
+
+Berikut demonstrasi singkat fitur utama aplikasi: Login, Registrasi, Tambah Inventaris, Edit, Hapus, dan Logout.
+
+- 🎬 **Link Video Demo**: ![Responsi 2 Mobile Paket 1 (H1D023007)](https://github.com/user-attachments/assets/fc7cffce-4990-4ad2-a3a1-f2534c4b2376)
+
+
+pada video demo menampilkan:
+1. Proses registrasi user baru
+2. Proses login
+3. Tampilan Home (daftar inventaris)
+4. Tambah data barang
+5. Edit & hapus data barang
+6. Logout dan uji login ulang jika perlu
+
+---
+
+## 🧱 Teknologi yang Digunakan
+
+- **Flutter** (UI & logic client)
+- **Dart**
+- **REST API** (Laravel / CodeIgniter – JSON)
+- **HTTP Package** (`package:http/http.dart`)
+- **SharedPreferences** untuk menyimpan token & informasi user
+- **intl** untuk format tanggal (di `InventoryFormPage`)
+
+---
+
+## 📂 Struktur Proyek Flutter
+
+Struktur folder inti aplikasi:
+
+```text
+lib/
+├── models/
+│   ├── app_user.dart             # Model data user hasil login (id, name, email, token)
+│   └── inventory.dart            # Model data inventaris komputer
+├── services/
+│   └── api_service.dart          # Service pemanggilan REST API (Auth + CRUD Inventaris)
+├── pages/
+│   ├── login_page.dart           # Halaman Login
+│   ├── register_page.dart        # Halaman Registrasi
+│   ├── home_page.dart            # Halaman utama (list inventaris + aksi CRUD)
+│   └── inventory_form_page.dart  # Form tambah/edit data inventaris
+└── main.dart                     # Titik masuk aplikasi & pengecekan sesi login
